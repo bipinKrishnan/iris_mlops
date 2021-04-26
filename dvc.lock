@@ -4,8 +4,8 @@ stages:
     cmd: python3 src/create_dataset.py --config params.yaml
     deps:
     - path: params.yaml
-      md5: 7bdbda4f01925a8d44991863bb8f8e75
-      size: 41
+      md5: 1995849402d170035120396fd1045e48
+      size: 83
     - path: src/create_dataset.py
       md5: 2d7233abc5d0cf252f2368f795916349
       size: 533
@@ -13,3 +13,13 @@ stages:
     - path: data/train_data.csv
       md5: 4e3dd39c6c890e3211e1588262c38857
       size: 3548
+  train_model:
+    cmd: python3 src/train_model.py --config params.yaml
+    deps:
+    - path: data/train_data.csv
+      md5: 4e3dd39c6c890e3211e1588262c38857
+      size: 3548
+    outs:
+    - path: models/model.joblib
+      md5: d55d1e8cf2a8aae0fb14c187aa7bf81e
+      size: 5901

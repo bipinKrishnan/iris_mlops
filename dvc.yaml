@@ -1,0 +1,15 @@
+stages:
+  create_data:
+    cmd: python3 src/create_dataset.py --config params.yaml
+    deps:
+      - src/create_dataset.py
+      - params.yaml
+    outs:
+      - data/train_data.csv
+
+  train_model:
+    cmd: python3 src/train_model.py --config params.yaml
+    deps:
+      - data/train_data.csv
+    outs:
+      - models/model.joblib
