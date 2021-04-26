@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  create_data:
+    cmd: python3 src/create_dataset.py --config params.yaml
+    deps:
+    - path: params.yaml
+      md5: 7bdbda4f01925a8d44991863bb8f8e75
+      size: 41
+    - path: src/create_dataset.py
+      md5: 2d7233abc5d0cf252f2368f795916349
+      size: 533
+    outs:
+    - path: data/train_data.csv
+      md5: 4e3dd39c6c890e3211e1588262c38857
+      size: 3548
