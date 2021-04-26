@@ -1,0 +1,15 @@
+artifact_uri: ./mlruns/1/b0245ae72839436390d3f4bded6ff413/artifacts
+end_time: 1619436089409
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: b0245ae72839436390d3f4bded6ff413
+run_uuid: b0245ae72839436390d3f4bded6ff413
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1619436089270
+status: 3
+tags: []
+user_id: ping

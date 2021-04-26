@@ -4,8 +4,8 @@ stages:
     cmd: python3 src/create_dataset.py --config params.yaml
     deps:
     - path: params.yaml
-      md5: 1995849402d170035120396fd1045e48
-      size: 83
+      md5: 329eed537dd7cb48d224a4b6cc69c6ed
+      size: 179
     - path: src/create_dataset.py
       md5: 2d7233abc5d0cf252f2368f795916349
       size: 533
