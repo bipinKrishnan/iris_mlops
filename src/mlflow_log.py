@@ -9,7 +9,15 @@ from urllib.parse import urlparse
 
 from utils import open_yaml
 
-def mlflow_log(config: str=Option(...)):
+def mlflow_log(config: str=Option(...)) -> None:
+    """
+    Logs the parameters, metrics and model using MLflow
+
+    Args:
+      config(str): path to configuration file
+
+    Returns: None
+    """
     config = open_yaml(config)
     
     mlflow.set_tracking_uri(config['mlflow']['tracking_uri'])

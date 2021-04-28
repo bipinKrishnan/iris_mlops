@@ -5,7 +5,15 @@ import joblib
 from typer import Option, run
 from utils import open_yaml
 
-def train_model(config: str=Option(...)):
+def train_model(config: str=Option(...)) -> None:
+    """
+    Trains the model on iris data and saves as a
+    joblib file
+
+    Args:
+      config(str): path to configuration file containing
+                   all parameters
+    """
     config = open_yaml(config)
 
     df = pd.read_csv(config['data']['dataset_path'])
