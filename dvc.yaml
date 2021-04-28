@@ -3,7 +3,6 @@ stages:
     cmd: python3 src/create_dataset.py --config params.yaml
     deps:
       - src/create_dataset.py
-      - params.yaml
     outs:
       - data/train_data.csv
 
